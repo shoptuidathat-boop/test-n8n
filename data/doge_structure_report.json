@@ -1,0 +1,181 @@
+{
+  "data_summary": {
+    "candles": 35040,
+    "start": "2025-04-27 16:45:00+00:00",
+    "end": "2026-04-27 16:30:00+00:00",
+    "gaps": 0
+  },
+  "swing_count": 15578,
+  "segment_count": 8070,
+  "state_counts": {
+    "CONTINUATION_UP": {
+      "count": 2009,
+      "avg_swings": 2.27,
+      "median_swings": 2.0,
+      "min_swings": 1,
+      "max_swings": 16
+    },
+    "REDISTRIBUTION": {
+      "count": 4035,
+      "avg_swings": 1.55,
+      "median_swings": 1.0,
+      "min_swings": 1,
+      "max_swings": 8
+    },
+    "CONTINUATION_DOWN": {
+      "count": 2026,
+      "avg_swings": 2.34,
+      "median_swings": 2.0,
+      "min_swings": 1,
+      "max_swings": 14
+    }
+  },
+  "transitions": {
+    "UP_CONT -> REDIST": 2009,
+    "REDIST -> DOWN_CONT": 2026,
+    "DOWN_CONT -> REDIST": 2026,
+    "REDIST -> UP_CONT": 2008
+  },
+  "transition_probabilities": {
+    "UP_CONT -> REDIST": 1.0,
+    "REDIST -> DOWN_CONT": 0.5022,
+    "DOWN_CONT -> REDIST": 1.0,
+    "REDIST -> UP_CONT": 0.4978
+  },
+  "path_patterns_3": {
+    "REDIST -> DOWN_CONT -> REDIST": 2026,
+    "REDIST -> UP_CONT -> REDIST": 2008,
+    "UP_CONT -> REDIST -> DOWN_CONT": 1408,
+    "DOWN_CONT -> REDIST -> UP_CONT": 1408,
+    "DOWN_CONT -> REDIST -> DOWN_CONT": 618,
+    "UP_CONT -> REDIST -> UP_CONT": 600
+  },
+  "path_patterns_4": {
+    "UP_CONT -> REDIST -> DOWN_CONT -> REDIST": 1408,
+    "REDIST -> DOWN_CONT -> REDIST -> UP_CONT": 1408,
+    "DOWN_CONT -> REDIST -> UP_CONT -> REDIST": 1408,
+    "REDIST -> UP_CONT -> REDIST -> DOWN_CONT": 1407,
+    "REDIST -> DOWN_CONT -> REDIST -> DOWN_CONT": 618,
+    "DOWN_CONT -> REDIST -> DOWN_CONT -> REDIST": 618,
+    "REDIST -> UP_CONT -> REDIST -> UP_CONT": 600,
+    "UP_CONT -> REDIST -> UP_CONT -> REDIST": 600
+  },
+  "repetition_patterns": {
+    "UP->REDIST->DOWN (true reversal)": 1408,
+    "DOWN->REDIST->UP (true reversal)": 1408,
+    "DOWN->REDIST->DOWN (failed reversal)": 618,
+    "UP->REDIST->UP (failed reversal)": 600
+  },
+  "rsi_behavior": {
+    "REDISTRIBUTION": {
+      "high_rising_pct": 50.1,
+      "high_falling_pct": 49.9,
+      "high_sample_size": 3194,
+      "low_rising_pct": 52.3,
+      "low_falling_pct": 47.7,
+      "low_sample_size": 3075
+    },
+    "CONTINUATION_UP": {
+      "high_rising_pct": 77.9,
+      "high_falling_pct": 22.1,
+      "high_sample_size": 2338,
+      "low_rising_pct": 75.6,
+      "low_falling_pct": 24.4,
+      "low_sample_size": 2223
+    },
+    "CONTINUATION_DOWN": {
+      "high_rising_pct": 23.5,
+      "high_falling_pct": 76.5,
+      "high_sample_size": 2268,
+      "low_rising_pct": 21.7,
+      "low_falling_pct": 78.3,
+      "low_sample_size": 2473
+    }
+  },
+  "examples": {
+    "UP_CONT": [
+      {
+        "start_dt": "2025-04-27 18:00:00+00:00",
+        "end_dt": "2025-04-27 20:00:00+00:00",
+        "swing_count": 3,
+        "swing_labels": [
+          "HL",
+          "HL",
+          "HH"
+        ]
+      },
+      {
+        "start_dt": "2025-04-27 23:00:00+00:00",
+        "end_dt": "2025-04-27 23:00:00+00:00",
+        "swing_count": 1,
+        "swing_labels": [
+          "HL"
+        ]
+      },
+      {
+        "start_dt": "2025-04-28 05:15:00+00:00",
+        "end_dt": "2025-04-28 05:15:00+00:00",
+        "swing_count": 1,
+        "swing_labels": [
+          "HH"
+        ]
+      }
+    ],
+    "REDIST": [
+      {
+        "start_dt": "2025-04-27 20:45:00+00:00",
+        "end_dt": "2025-04-27 20:45:00+00:00",
+        "swing_count": 1,
+        "swing_labels": [
+          "LH"
+        ]
+      },
+      {
+        "start_dt": "2025-04-27 21:30:00+00:00",
+        "end_dt": "2025-04-27 22:30:00+00:00",
+        "swing_count": 3,
+        "swing_labels": [
+          "HH",
+          "LL",
+          "LL"
+        ]
+      },
+      {
+        "start_dt": "2025-04-27 23:30:00+00:00",
+        "end_dt": "2025-04-27 23:30:00+00:00",
+        "swing_count": 1,
+        "swing_labels": [
+          "LH"
+        ]
+      }
+    ],
+    "DOWN_CONT": [
+      {
+        "start_dt": "2025-04-27 21:00:00+00:00",
+        "end_dt": "2025-04-27 21:00:00+00:00",
+        "swing_count": 1,
+        "swing_labels": [
+          "LL"
+        ]
+      },
+      {
+        "start_dt": "2025-04-28 00:15:00+00:00",
+        "end_dt": "2025-04-28 01:30:00+00:00",
+        "swing_count": 3,
+        "swing_labels": [
+          "LL",
+          "LH",
+          "LL"
+        ]
+      },
+      {
+        "start_dt": "2025-04-28 04:30:00+00:00",
+        "end_dt": "2025-04-28 04:30:00+00:00",
+        "swing_count": 1,
+        "swing_labels": [
+          "LH"
+        ]
+      }
+    ]
+  }
+}
