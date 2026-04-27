@@ -1,0 +1,176 @@
+========================================================================
+  DOGE/USDT 15m — MARKET STRUCTURE PATH ANALYSIS
+  Continuation ↔ Redistribution ('lối mòn')
+========================================================================
+
+Data range : 2025-05-02 16:45:00+00:00 → 2026-04-27 16:30:00+00:00
+Candles    : 34,560
+Swings     : 12,589  (highs: 6,268, lows: 6,321)
+Segments   : 6,492
+
+------------------------------------------------------------------------
+1. STATE COUNTS
+------------------------------------------------------------------------
+  CONTINUATION_DOWN          count=1643  avg_swings=2.4  median=2  range=[1, 16]
+  CONTINUATION_UP            count=1603  avg_swings=2.3  median=2  range=[1, 16]
+  REDISTRIBUTION             count=3246  avg_swings=1.5  median=1  range=[1, 6]
+
+------------------------------------------------------------------------
+2. TRANSITION MATRIX
+------------------------------------------------------------------------
+  Total transitions: 6491
+
+  Transition                                               Count   P(from)  P(global)
+  ------------------------------------------------------- ------  --------  ---------
+  CONTINUATION_DOWN → REDISTRIBUTION                        1643   100.00%     25.31%
+  REDISTRIBUTION → CONTINUATION_DOWN                        1642    50.60%     25.30%
+  REDISTRIBUTION → CONTINUATION_UP                          1603    49.40%     24.70%
+  CONTINUATION_UP → REDISTRIBUTION                          1603   100.00%     24.70%
+
+------------------------------------------------------------------------
+3. TOP RECURRING PATHS (trigrams)
+------------------------------------------------------------------------
+  1642x  REDISTRIBUTION → CONTINUATION_DOWN → REDISTRIBUTION
+  1603x  REDISTRIBUTION → CONTINUATION_UP → REDISTRIBUTION
+  1074x  CONTINUATION_DOWN → REDISTRIBUTION → CONTINUATION_UP
+  1073x  CONTINUATION_UP → REDISTRIBUTION → CONTINUATION_DOWN
+   569x  CONTINUATION_DOWN → REDISTRIBUTION → CONTINUATION_DOWN
+   529x  CONTINUATION_UP → REDISTRIBUTION → CONTINUATION_UP
+
+   Bigrams:
+  1643x  CONTINUATION_DOWN → REDISTRIBUTION
+  1642x  REDISTRIBUTION → CONTINUATION_DOWN
+  1603x  REDISTRIBUTION → CONTINUATION_UP
+  1603x  CONTINUATION_UP → REDISTRIBUTION
+
+------------------------------------------------------------------------
+4. AVERAGE LENGTH (swings per state)
+------------------------------------------------------------------------
+  CONTINUATION_DOWN          avg=2.35  std=1.86  median=2
+  CONTINUATION_UP            avg=2.32  std=1.80  median=2
+  REDISTRIBUTION             avg=1.54  std=0.82  median=1
+
+------------------------------------------------------------------------
+5. RSI RELATIONAL BEHAVIOR PER STATE
+------------------------------------------------------------------------
+
+  [CONTINUATION_DOWN]
+    High swings: 649 comparisons
+      RSI rising  :  203 (31.3%)
+      RSI falling :  445 (68.6%)
+    Low swings: 728 comparisons
+      RSI rising  :  227 (31.2%)
+      RSI falling :  501 (68.8%)
+    Bearish divergence : 0
+    Bullish divergence : 219
+    Convergence        : 937
+
+  [CONTINUATION_UP]
+    High swings: 681 comparisons
+      RSI rising  :  478 (70.2%)
+      RSI falling :  202 (29.7%)
+    Low swings: 627 comparisons
+      RSI rising  :  440 (70.2%)
+      RSI falling :  187 (29.8%)
+    Bearish divergence : 202
+    Bullish divergence : 0
+    Convergence        : 918
+
+  [REDISTRIBUTION]
+    High swings: 466 comparisons
+      RSI rising  :  229 (49.1%)
+      RSI falling :  235 (50.4%)
+    Low swings: 426 comparisons
+      RSI rising  :  230 (54.0%)
+      RSI falling :  194 (45.5%)
+    Bearish divergence : 38
+    Bullish divergence : 47
+    Convergence        : 680
+
+------------------------------------------------------------------------
+6. EXAMPLE SEGMENTS FOR TOP PATHS
+------------------------------------------------------------------------
+
+  Pattern: REDISTRIBUTION → CONTINUATION_DOWN → REDISTRIBUTION  (3 example(s))
+    Example 1:
+      REDISTRIBUTION             2025-05-03T01:30:00.000 → 2025-05-03T03:15:00.000  (1 swings)
+      CONTINUATION_DOWN          2025-05-03T03:15:00.000 → 2025-05-03T04:00:00.000  (1 swings)
+      REDISTRIBUTION             2025-05-03T04:00:00.000 → 2025-05-03T05:00:00.000  (2 swings)
+    Example 2:
+      REDISTRIBUTION             2025-05-03T04:00:00.000 → 2025-05-03T05:00:00.000  (2 swings)
+      CONTINUATION_DOWN          2025-05-03T05:00:00.000 → 2025-05-03T09:15:00.000  (4 swings)
+      REDISTRIBUTION             2025-05-03T09:15:00.000 → 2025-05-03T11:30:00.000  (2 swings)
+    Example 3:
+      REDISTRIBUTION             2025-05-03T09:15:00.000 → 2025-05-03T11:30:00.000  (2 swings)
+      CONTINUATION_DOWN          2025-05-03T11:30:00.000 → 2025-05-03T12:00:00.000  (1 swings)
+      REDISTRIBUTION             2025-05-03T12:00:00.000 → 2025-05-03T12:30:00.000  (1 swings)
+
+  Pattern: REDISTRIBUTION → CONTINUATION_UP → REDISTRIBUTION  (3 example(s))
+    Example 1:
+      REDISTRIBUTION             2025-05-02T23:15:00.000 → 2025-05-02T23:30:00.000  (1 swings)
+      CONTINUATION_UP            2025-05-02T23:30:00.000 → 2025-05-03T01:30:00.000  (2 swings)
+      REDISTRIBUTION             2025-05-03T01:30:00.000 → 2025-05-03T03:15:00.000  (1 swings)
+    Example 2:
+      REDISTRIBUTION             2025-05-03T12:00:00.000 → 2025-05-03T12:30:00.000  (1 swings)
+      CONTINUATION_UP            2025-05-03T12:30:00.000 → 2025-05-03T14:45:00.000  (5 swings)
+      REDISTRIBUTION             2025-05-03T14:45:00.000 → 2025-05-03T17:15:00.000  (3 swings)
+    Example 3:
+      REDISTRIBUTION             2025-05-03T19:30:00.000 → 2025-05-03T21:00:00.000  (2 swings)
+      CONTINUATION_UP            2025-05-03T21:00:00.000 → 2025-05-03T21:15:00.000  (1 swings)
+      REDISTRIBUTION             2025-05-03T21:15:00.000 → 2025-05-03T23:30:00.000  (3 swings)
+
+  Pattern: CONTINUATION_DOWN → REDISTRIBUTION → CONTINUATION_UP  (3 example(s))
+    Example 1:
+      CONTINUATION_DOWN          2025-05-02T20:00:00.000 → 2025-05-02T23:15:00.000  (4 swings)
+      REDISTRIBUTION             2025-05-02T23:15:00.000 → 2025-05-02T23:30:00.000  (1 swings)
+      CONTINUATION_UP            2025-05-02T23:30:00.000 → 2025-05-03T01:30:00.000  (2 swings)
+    Example 2:
+      CONTINUATION_DOWN          2025-05-03T11:30:00.000 → 2025-05-03T12:00:00.000  (1 swings)
+      REDISTRIBUTION             2025-05-03T12:00:00.000 → 2025-05-03T12:30:00.000  (1 swings)
+      CONTINUATION_UP            2025-05-03T12:30:00.000 → 2025-05-03T14:45:00.000  (5 swings)
+    Example 3:
+      CONTINUATION_DOWN          2025-05-03T17:15:00.000 → 2025-05-03T19:30:00.000  (2 swings)
+      REDISTRIBUTION             2025-05-03T19:30:00.000 → 2025-05-03T21:00:00.000  (2 swings)
+      CONTINUATION_UP            2025-05-03T21:00:00.000 → 2025-05-03T21:15:00.000  (1 swings)
+
+  Pattern: CONTINUATION_UP → REDISTRIBUTION → CONTINUATION_DOWN  (3 example(s))
+    Example 1:
+      CONTINUATION_UP            2025-05-02T23:30:00.000 → 2025-05-03T01:30:00.000  (2 swings)
+      REDISTRIBUTION             2025-05-03T01:30:00.000 → 2025-05-03T03:15:00.000  (1 swings)
+      CONTINUATION_DOWN          2025-05-03T03:15:00.000 → 2025-05-03T04:00:00.000  (1 swings)
+    Example 2:
+      CONTINUATION_UP            2025-05-03T12:30:00.000 → 2025-05-03T14:45:00.000  (5 swings)
+      REDISTRIBUTION             2025-05-03T14:45:00.000 → 2025-05-03T17:15:00.000  (3 swings)
+      CONTINUATION_DOWN          2025-05-03T17:15:00.000 → 2025-05-03T19:30:00.000  (2 swings)
+    Example 3:
+      CONTINUATION_UP            2025-05-03T21:00:00.000 → 2025-05-03T21:15:00.000  (1 swings)
+      REDISTRIBUTION             2025-05-03T21:15:00.000 → 2025-05-03T23:30:00.000  (3 swings)
+      CONTINUATION_DOWN          2025-05-03T23:30:00.000 → 2025-05-04T02:15:00.000  (4 swings)
+
+  Pattern: CONTINUATION_DOWN → REDISTRIBUTION → CONTINUATION_DOWN  (3 example(s))
+    Example 1:
+      CONTINUATION_DOWN          2025-05-03T03:15:00.000 → 2025-05-03T04:00:00.000  (1 swings)
+      REDISTRIBUTION             2025-05-03T04:00:00.000 → 2025-05-03T05:00:00.000  (2 swings)
+      CONTINUATION_DOWN          2025-05-03T05:00:00.000 → 2025-05-03T09:15:00.000  (4 swings)
+    Example 2:
+      CONTINUATION_DOWN          2025-05-03T05:00:00.000 → 2025-05-03T09:15:00.000  (4 swings)
+      REDISTRIBUTION             2025-05-03T09:15:00.000 → 2025-05-03T11:30:00.000  (2 swings)
+      CONTINUATION_DOWN          2025-05-03T11:30:00.000 → 2025-05-03T12:00:00.000  (1 swings)
+    Example 3:
+      CONTINUATION_DOWN          2025-05-03T23:30:00.000 → 2025-05-04T02:15:00.000  (4 swings)
+      REDISTRIBUTION             2025-05-04T02:15:00.000 → 2025-05-04T04:15:00.000  (1 swings)
+      CONTINUATION_DOWN          2025-05-04T04:15:00.000 → 2025-05-04T05:15:00.000  (1 swings)
+
+------------------------------------------------------------------------
+7. REVERSAL vs FAILED REVERSAL PATTERNS
+------------------------------------------------------------------------
+  1642x  REDISTRIBUTION → CONTINUATION_DOWN → REDISTRIBUTION
+  1603x  REDISTRIBUTION → CONTINUATION_UP → REDISTRIBUTION
+  1074x  CONTINUATION_DOWN → REDISTRIBUTION → CONTINUATION_UP ← TRUE REVERSAL
+  1073x  CONTINUATION_UP → REDISTRIBUTION → CONTINUATION_DOWN ← TRUE REVERSAL
+   569x  CONTINUATION_DOWN → REDISTRIBUTION → CONTINUATION_DOWN ← FAILED REVERSAL
+   529x  CONTINUATION_UP → REDISTRIBUTION → CONTINUATION_UP ← FAILED REVERSAL
+
+========================================================================
+  END OF REPORT
+========================================================================
