@@ -1,0 +1,18 @@
+{
+  "total_trades": 162,
+  "wins": 29,
+  "losses": 133,
+  "winrate_pct": 17.9,
+  "profit_factor": 0.4342,
+  "max_drawdown_pct": -11.3303,
+  "net_profit": -1066.53,
+  "net_profit_pct": -10.67,
+  "final_capital": 8933.47,
+  "long_trades": 79,
+  "short_trades": 83,
+  "long_wins": 11,
+  "short_wins": 18,
+  "avg_pnl_pct": -0.0694,
+  "gross_profit": 818.38,
+  "gross_loss": 1884.9
+}
