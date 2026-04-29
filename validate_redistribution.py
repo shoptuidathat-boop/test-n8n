@@ -33,8 +33,8 @@ from tabulate import tabulate
 
 def fetch_ohlcv(symbol: str, timeframe: str = "15m",
                 years: int = 4) -> pd.DataFrame:
-    """Fetch OHLCV data from Binance. Paginate to cover full history."""
-    exchange = ccxt.binance({"enableRateLimit": True})
+    """Fetch OHLCV data via ccxt (OKX). Paginate to cover full history."""
+    exchange = ccxt.okx({"enableRateLimit": True})
 
     ms_per_candle = exchange.parse_timeframe(timeframe) * 1000
     now = exchange.milliseconds()

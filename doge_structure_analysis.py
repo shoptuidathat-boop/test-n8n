@@ -32,8 +32,8 @@ from tabulate import tabulate
 
 def fetch_ohlcv(symbol: str = "DOGE/USDT", timeframe: str = "15m",
                 months: int = 12) -> pd.DataFrame:
-    """Fetch OHLCV data from Binance. Paginate to cover *months* of history."""
-    exchange = ccxt.binance({"enableRateLimit": True})
+    """Fetch OHLCV data via ccxt (OKX). Paginate to cover *months* of history."""
+    exchange = ccxt.okx({"enableRateLimit": True})
 
     ms_per_candle = exchange.parse_timeframe(timeframe) * 1000
     now = exchange.milliseconds()
@@ -376,6 +376,8 @@ def analyze_rsi_per_state(swings: list[dict], segments: list[dict]) -> dict:
         ]
         for sw in seg_swings:
             rsi_delta = sw["rsi"] - sw["rsi_prev"]
+            if np.isnan(rsi_delta):
+                continue
             if abs(rsi_delta) < 2:
                 direction = "FLAT"
             elif rsi_delta > 0:
@@ -401,7 +403,8 @@ def analyze_rsi_per_state(swings: list[dict], segments: list[dict]) -> dict:
                 return {"count": 0}
             dirs = Counter(e["direction"] for e in items)
             total = len(items)
-            avg_delta = round(np.mean([e["rsi_delta"] for e in items]), 2)
+            deltas = [e["rsi_delta"] for e in items if not np.isnan(e["rsi_delta"])]
+            avg_delta = round(np.mean(deltas), 2) if deltas else 0.0
             return {
                 "count": total,
                 "avg_rsi_delta": avg_delta,
